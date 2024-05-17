@@ -25,6 +25,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	implementation 'org.apache.tomcat.embed:tomcat-embed-websocket'
+	implementation 'com.google.protobuf:protobuf-java:4.26.1'
+	implementation 'com.google.code.gson:gson:2.6.2'
 
 	implementation 'org.webjars:jquery:3.4.1'
 	implementation 'org.webjars:bootstrap:4.3.1'
@@ -34,10 +37,6 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-tasks.named('bootBuildImage') {
-	builder = 'paketobuildpacks/builder-jammy-base:latest'
 }
 
 tasks.named('test') {
